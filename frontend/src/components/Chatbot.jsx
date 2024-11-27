@@ -61,7 +61,7 @@ const Chatbot = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:5000/api/chat", { query: message });
+            const response = await axios.post("https://mental-health-chatbot-server.vercel.app/api/chat", { query: message });
             const botMessage = { sender: "bot", text: response.data.reply };
             setMessages((prevMessages) => [...prevMessages, botMessage]);
         } catch (error) {
