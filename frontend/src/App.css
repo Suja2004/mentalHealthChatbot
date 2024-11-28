@@ -168,6 +168,6 @@ button:disabled:hover {
 }
 @media(max-width:400px){
   .chatbot-container{
-    width:100%;
+    max-width:350px;
   }
 }
