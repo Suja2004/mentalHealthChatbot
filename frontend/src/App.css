@@ -166,8 +166,3 @@ button:disabled:hover {
 .coping-strategies ul li p {
   margin: 0;
 }
-@media(max-width:400px){
-  .chatbot-container{
-    max-width:350px;
-  }
-}
