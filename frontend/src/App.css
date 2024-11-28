@@ -17,7 +17,6 @@ html {
 
 .chatbot-container {
   width: 400px;
-  max-width: 450px;
   height: 90vh;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -168,7 +167,7 @@ button:disabled:hover {
   margin: 0;
 }
 @media(max-width:400px){
-  .chatbox{
+  .chatbot-container{
     width:100%;
   }
 }
