@@ -101,7 +101,7 @@ const Chatbot = () => {
                 />
                 <button onClick={() => handleSend()}>Send</button>
                 <button onClick={startListening} disabled={isListening}>
-                    {isListening ? "Listening..." : "🎤 Voice"}
+                    {isListening ? "Listening..." : "🎤"}
                 </button>
             </div>
         </div>
