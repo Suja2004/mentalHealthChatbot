@@ -2,16 +2,15 @@ import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
 import "./CommunitySupport.css";
 
-const socket = io("http://localhost:5000"); // Backend server URL
+const socket = io("mental-health-chatbot-server.vercel.app");
 
 const CommunitySupport = () => {
     const [room, setRoom] = useState("General");
     const [message, setMessage] = useState("");
     const [messages, setMessages] = useState([]);
-    const [username] = useState("You"); // Default username
+    const [username] = useState("You");
 
     useEffect(() => {
-        // Join the selected room
         socket.emit("joinRoom", { room, username });
 
         socket.off("message");
@@ -23,13 +22,12 @@ const CommunitySupport = () => {
             socket.emit("leaveRoom", room);
             socket.off("message");
         };
-    }, [room, username]); // Re-run effect when room changes
+    }, [room, username]);
 
     const sendMessage = () => {
         if (message.trim()) {
             const newMessage = { sender: username, text: message };
             socket.emit("chatMessage", { room, message: newMessage });
-            // setMessages((prevMessages) => [...prevMessages, newMessage]); 
             setMessage("");
         }
     };
