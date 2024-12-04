@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Chatbot from "./components/Chatbot";
 import Navbar from "./components/Navbar";
-import CommunitySupport from "./components/CommunitySupport";
+// import CommunitySupport from "./components/CommunitySupport";
 
 import './App.css';
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
         <Navbar />
         <Routes>
             <Route path="/" element={<Chatbot />} />
-            <Route path="/community" element={<CommunitySupport />} />
+{/*             <Route path="/community" element={<CommunitySupport />} /> */}
         </Routes>
     </Router>
 );
