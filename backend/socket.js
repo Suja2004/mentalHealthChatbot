@@ -3,14 +3,12 @@ const { Server } = require("socket.io");
 const setupSocket = (httpServer) => {
     const io = new Server(httpServer, {
         cors: {
-            origin: "http://localhost:5173",
+            origin: "https://mental-health-chatbot-hazel.vercel.app",
             methods: ["GET", "POST"],
         },
     });
 
     io.on("connection", (socket) => {
-        // console.log("New connection");
-
         socket.on("joinRoom", ({ room, username }) => {
             socket.join(room);
             socket.to(room).emit("message", { sender: "System", text: `${username} has joined the room.` });
