@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const { detectIntent } = require("./chatbot");
-const setupSocket = require("./socket");
+// const setupSocket = require("./socket");
 
 const app = express();
 const PORT = 5000;
