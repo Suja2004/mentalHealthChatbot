@@ -25,7 +25,7 @@ app.post("/api/chat", async (req, res) => {
     }
 });
 
-// const httpServer = http.createServer(app);
+const httpServer = http.createServer(app);
 // setupSocket(httpServer);
 
 httpServer.listen(PORT, () => {
