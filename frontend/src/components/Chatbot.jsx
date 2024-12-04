@@ -60,7 +60,7 @@ const Chatbot = () => {
         setInput("");
 
         try {
-            const response = await axios.post("mental-health-chatbot-server.vercel.app/chat", { query: message });
+            const response = await axios.post("mental-health-chatbot-server.vercel.app/api/chat", { query: message });
             const botMessage = { sender: "bot", text: response.data.reply };
             setMessages((prevMessages) => [...prevMessages, botMessage]);
             speakText(response.data.reply); 
