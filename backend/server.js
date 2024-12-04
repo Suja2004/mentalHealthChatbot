@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
 
-// Import chatbot and socket logic
 const { detectIntent } = require("./chatbot");
 const setupSocket = require("./socket");
 
@@ -26,9 +25,8 @@ app.post("/api/chat", async (req, res) => {
     }
 });
 
-// Create HTTP server and attach Socket.IO
-const httpServer = http.createServer(app);
-setupSocket(httpServer);
+// const httpServer = http.createServer(app);
+// setupSocket(httpServer);
 
 httpServer.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
