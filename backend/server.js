@@ -106,7 +106,7 @@ app.post("/api/chat", async (req, res) => {
 });
 
 // Create HTTP server and attach Socket.IO
-const httpServer = http.createServer(app);
-httpServer.listen(PORT, () => {
+// const httpServer = http.createServer(app);
+app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
