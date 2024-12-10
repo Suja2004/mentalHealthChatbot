@@ -12,7 +12,7 @@ const Login = () => {
         e.preventDefault();
         try {
             setError(''); 
-            const response = await axios.post(https://mental-health-chatbot-hazel.vercel.app/api/login', { usernameOrEmail, password });
+            const response = await axios.post('https://mental-health-chatbot-server.vercel.app/api/login', { usernameOrEmail, password });
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('userId', response.data.userId); 
             navigate('/chatbot'); 
