@@ -10,7 +10,6 @@ const Register = () => {
     const [error, setError] = useState('');
     const [passwordStrength, setPasswordStrength] = useState('');
 
-    // Function to check password strength
     const checkPasswordStrength = (password) => {
         const minLength = password.length >= 8;
         const hasNumber = /\d/.test(password);
@@ -36,7 +35,7 @@ const Register = () => {
 
         try {
             setError('');
-            await axios.post('https://mental-health-chatbot-hazel.vercel.app/api/register', { username, password, email });
+            await axios.post('https://mental-health-chatbot-server.vercel.app/api/register', { username, password, email });
             alert('Registration successful! You can now log in.');
             navigate('/');
         } catch (error) {
