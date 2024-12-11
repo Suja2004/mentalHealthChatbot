@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './UserPage.css';
+import './Userpage.css';
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
