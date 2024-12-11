@@ -46,7 +46,7 @@ const Severity = () => {
             const totalScore = responses.reduce((acc, val) => acc + val, 0);
             setSeverity(totalScore);
 
-            await axios.post("http://localhost:3000/predict", {
+            await axios.post("https://severityserver.onrender.com/predict", {
                 responses: responses,
             });
         } catch (err) {
